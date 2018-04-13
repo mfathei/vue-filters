@@ -13,7 +13,10 @@
 import { fruitMixin } from "./FruitMixin";
 
 export default {
-  mixins: [fruitMixin]
+  mixins: [fruitMixin],
+  created() {
+    console.log("Inside List component Hooks.");
+  }
 };
 </script>
 
