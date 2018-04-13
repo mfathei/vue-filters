@@ -10,26 +10,10 @@
 </template>
 
 <script>
+import { fruitMixin } from "./FruitMixin";
+
 export default {
-  data() {
-    return {
-      text: "Hello World!",
-      filteredText: "",
-      fruits: ["Apple", "Mango", "Banana", "Melon"]
-    };
-  },
-  filters: {
-    toUppercase(value) {
-      return value.toUpperCase();
-    }
-  },
-  computed: {
-    filteredFruits() {
-      return this.fruits.filter(element => {
-        return element.match(this.filteredText);
-      });
-    }
-  }
+  mixins: [fruitMixin]
 };
 </script>
 
